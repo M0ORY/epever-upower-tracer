@@ -7,6 +7,10 @@ Fixes:
 
 Fixed data types to be fixed as floats as influxdb just takes the first data type it gets and defaults to that then when the script tried to send a float after an initial int or vice versa this resulted in an error retuened from influxdb. This was visable as a hole in the data in grafana but very hard to catch in practive without logging.
 
+Changes: 
+
+Added a "BAcurr" value to the output as the original BAamps was misleading. This is not Battery Amps as it mght suggest but the total output current of the charge controller buck converter. Actual battery charge / discharge current is the BAamps value less the DCamps (load) value. Negative for discharging and positive for charging.
+
 TO DO: Port to Python 3
 
 **EPSolar Tracer** AN/BN devices have been around for a while so this is just another attempt to establish a good monitoring package.

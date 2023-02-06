@@ -49,7 +49,7 @@ body_solar = [
             "PVkwh2d": float(up.readReg(PVkwhToday)),
             "BAvolt": float(up.readReg(BAvolt)),
             "BAamps": float(up.readReg(BAamps)),
-	    "BAcurr": float(BAcurr)
+	    "BAcurr": float(BAcurr),
             "BAperc": float(up.readReg(BAperc)),
             "DCvolt": float(up.readReg(DCvolt)),
             "DCamps": float(up.readReg(DCamps)),

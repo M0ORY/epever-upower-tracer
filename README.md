@@ -1,6 +1,10 @@
 Monitoring EPsolar UPower and Tracer devices from Raspberry Pi with Python via RS-485
 ===================================================
 
+This project was forlked from https://github.com/fatyogi/epever-upower-tracer and the driver from https://github.com/kasbert/epsolar-tracer plus some fixes I have added myself. Fixed data types to be fixed as floats as influxdb just takes the first data type it gets and defaults to that then when the script tried to send an int this resulted in an error. 
+
+TO DO: Port to Python 3
+
 **EPSolar Tracer** AN/BN devices have been around for a while so this is just another attempt to establish a good monitoring package.
 
 **EPSolar UPower** hybrid inverters are great at what they do, however it is difficult to get them monitored if you have a Linux machine as they are still new and the protocol is not publicly available. Out of my communication with EPSolar I managed to obtain the list of registers and develop a UPower Python module.

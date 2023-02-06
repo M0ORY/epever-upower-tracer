@@ -31,6 +31,11 @@ PVwatt = ((int(PVwatt) << 16) + up.readReg(PVwattL));
 DCwatt = up.readReg(DCwattH)
 DCwatt = ((int(DCwatt) << 16) + up.readReg(DCwattL));
 
+# We create a compund value of BAcurr becase BAamps is misleading BAamps is the output current of the buck converter including any load
+# so actual battery current is BAamps minus DCamps and we round that to 2 decimal places
+BAcurr = up.readReg(BAamps) - up.readReg(DCamps);
+BAcurr = round(BAcurr, 2)
+
 # form a data record
 body_solar = [
     {
@@ -44,6 +49,7 @@ body_solar = [
             "PVkwh2d": float(up.readReg(PVkwhToday)),
             "BAvolt": float(up.readReg(BAvolt)),
             "BAamps": float(up.readReg(BAamps)),
+	    "BAcurr": float(BAcurr)
             "BAperc": float(up.readReg(BAperc)),
             "DCvolt": float(up.readReg(DCvolt)),
             "DCamps": float(up.readReg(DCamps)),

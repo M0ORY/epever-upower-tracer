@@ -1,7 +1,11 @@
 Monitoring EPsolar UPower and Tracer devices from Raspberry Pi with Python via RS-485
 ===================================================
 
-This project was forlked from https://github.com/fatyogi/epever-upower-tracer and the driver from https://github.com/kasbert/epsolar-tracer plus some fixes I have added myself. Fixed data types to be fixed as floats as influxdb just takes the first data type it gets and defaults to that then when the script tried to send an int this resulted in an error. 
+This project was forlked from https://github.com/fatyogi/epever-upower-tracer and the driver from https://github.com/kasbert/epsolar-tracer plus some fixes I have added myself. 
+
+Fixes:
+
+Fixed data types to be fixed as floats as influxdb just takes the first data type it gets and defaults to that then when the script tried to send a float after an initial int or vice versa this resulted in an error retuened from influxdb. This was visable as a hole in the data in grafana but very hard to catch in practive without logging.
 
 TO DO: Port to Python 3
 

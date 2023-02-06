@@ -51,6 +51,7 @@ body_solar = [
             "BAamps": float(up.readReg(BAamps)),
 	    "BAcurr": float(BAcurr),
             "BAperc": float(up.readReg(BAperc)),
+	    "BAtemp": float(up.readReg(BAtemp)),
             "DCvolt": float(up.readReg(DCvolt)),
             "DCamps": float(up.readReg(DCamps)),
             "DCwatt": float(DCwatt),

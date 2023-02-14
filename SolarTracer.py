@@ -97,7 +97,7 @@ class SolarTracer:
 	    except IOError as err:
 	    		return -2
 	    except ValueError:
-    			print "Could not convert data!"
+    			print("Could not convert data!")
     			return -3
 
 

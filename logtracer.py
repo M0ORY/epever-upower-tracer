@@ -18,7 +18,7 @@ measurement_name = "solar"
 up = SolarTracer()
 if (up.connect() < 0):
 	print("Could not connect to the device")
-	exit -2
+	exit(2)
 
 # get timestamps
 localtime = time.localtime()

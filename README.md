@@ -1,7 +1,7 @@
 Monitoring EPsolar UPower and Tracer devices from Raspberry Pi with Python via RS-485
 ===================================================
 
-This project was forlked from https://github.com/fatyogi/epever-upower-tracer and the driver from https://github.com/kasbert/epsolar-tracer plus some fixes I have added myself. 
+This project was forlked from https://github.com/fatyogi/epever-upower-tracer and the driver from https://github.com/kasbert/epsolar-tracer plus some fixes I have added myself. My changes are only related to the Tracer side as I only have the Tracer charge controller.
 
 Fixes:
 
